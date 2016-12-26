@@ -1,0 +1,84 @@
+cb({
+	"code": "0",
+	"msg": "success",
+	"data": {
+		"groupId": 213123,
+		"groupName": "xxx自律小组",
+		"supervisorName": "张三",
+		"leaderName": "李四",
+		"marketerName": "王五",
+		"catchpolerName": "刘六",
+		"groupAddress": "xx路",
+		"members": [
+			{
+				"storeId": 123213,
+				"ownerName": "赵七",
+				"storeName": "xx店",
+				"storeAddress": "xx路"
+			},
+			{
+				"storeId": 123213,
+				"ownerName": "赵七",
+				"storeName": "xx店",
+				"storeAddress": "xx路"
+			},
+			{
+				"storeId": 123213,
+				"ownerName": "赵七",
+				"storeName": "xx店",
+				"storeAddress": "xx路"
+			},
+			{
+				"storeId": 123213,
+				"ownerName": "赵七",
+				"storeName": "xx店",
+				"storeAddress": "xx路"
+			},
+			{
+				"storeId": 123213,
+				"ownerName": "赵七",
+				"storeName": "xx店",
+				"storeAddress": "xx路"
+			},
+			{
+				"storeId": 123213,
+				"ownerName": "赵七",
+				"storeName": "xx店",
+				"storeAddress": "xx路"
+			},
+			{
+				"storeId": 123213,
+				"ownerName": "赵七",
+				"storeName": "xx店",
+				"storeAddress": "xx路"
+			},
+			{
+				"storeId": 123213,
+				"ownerName": "赵七",
+				"storeName": "xx店",
+				"storeAddress": "xx路"
+			},
+			{
+				"storeId": 123213,
+				"ownerName": "赵七",
+				"storeName": "xx店",
+				"storeAddress": "xx路"
+			},
+			{
+				"storeId": 123213,
+				"ownerName": "赵七",
+				"storeName": "xx店",
+				"storeAddress": "xx路"
+			}
+		],
+		"awards": [
+			"xxx一等奖",
+			"xxx二等奖"
+		],
+		"photos": [
+			"http://img4.imgtn.bdimg.com/it/u=2928990589,3862413937&fm=15&gp=0.jpg",
+			"http://img4.imgtn.bdimg.com/it/u=2928990589,3862413937&fm=15&gp=0.jpg"
+		],
+		"rule": "hahaha"
+	}
+});

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title></title>
+		<link rel="stylesheet" href="../../common/css/weui.css"/>
+		<link rel="stylesheet" href="./index.css"/>
+	</head>
+	<body ontouchstart>
+		<div class="container" id="container"></div>
+		<script id="licence-list-tpl" type="text/x-handlebars-template">
+			<div class="weui_cells_title licence-list-title">
+				<div><img class="type-icon" src="../../common/img/ic_xkz_js.png" alt="icon" /></div>
+				<div class="weui_cell_primary">{{tips}}</div>
+			</div>
+			<div class="weui_cells">
+				{{#each storeList}}
+				<div class="weui_cell licence-list-cell">
+					<div class="weui_cell_bd weui_cell_primary">
+						<h3>{{storeName}}</h3>
+						<p style="display:none;">{{dateDesc}}：{{date}}</p>
+					</div>
+					<div class="weui_cell_bd">
+						{{#if isContact}}
+						<a href="tel:{{contact}}" class="weui_btn weui_btn_primary btn-contact">联系他</a>
+						{{else}}
+						<a href="javascript:;" class="weui_btn weui_btn_primary btn-warn" data-storeid="{{storeId}}" data-date="{{date}}">提醒他</a>
+						{{/if}}
+					</div>
+				</div>
+				{{/each}}
+			</div>
+		</script>
+		<script src="./index-combo.js"></script>
+	</body>
+</html>

@@ -1,0 +1,18 @@
+{
+	"code": "0",
+	"msg": "success",
+	"data": {
+		"list": [
+			{
+				"userId": 6,
+				"name": "王6"
+			},
+			{
+				"userId": 7,
+				"name": "王7"
+			}
+		],
+		"count": 2,
+		"hasMore": true
+	}
+}

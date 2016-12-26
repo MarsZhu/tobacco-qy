@@ -1,0 +1,27 @@
+cb({
+	"code": "0",
+	"msg": "success",
+	"data": {
+		"count": 5,
+		"infoList": [
+			{
+				"clientCode":"1450020000101",
+				"clientName":"李某某",
+				"collectPeriod":"0407-0413",
+				"isCollect":false
+			},
+			{
+				"clientCode":"1450020000101",
+				"clientName":"李某某",
+				"collectPeriod":"0407-0413",
+				"isCollect":false
+			},
+			{
+				"clientCode":"1450020000101",
+				"clientName":"李某某",
+				"collectPeriod":"0407-0413",
+				"isCollect":true
+			}
+		]
+	}
+});

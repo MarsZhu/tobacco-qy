@@ -1,0 +1,52 @@
+@import "src/widgets/search-box/index";
+
+html, body {
+	height: 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+
+body {
+	overflow-x: hidden;
+	background-color: #FBF9FE;
+}
+
+.container {
+	height: 100%;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	& > div {
+		background-color: #FBF9FE;
+	}
+
+	p {
+		color: #333;
+		font-size: 14px;
+	}
+
+	b {
+		font-weight: normal;
+		color: #09BB07;
+	}
+
+	.item-right {
+		text-align: right;
+	}
+
+	.weui_navbar_item,
+	.weui_navbar_item:hover,
+	.weui_navbar_item:visited {
+		color: #000;
+	}
+	
+	.tab-body {
+		display: none;
+	}
+
+	.tab-body-on {
+		display: block;
+	}
+
+	.scan-btn {
+		margin: 50px 50px;
+	}
+}

@@ -1,0 +1,10 @@
+cb({
+	"code": "0",
+	"msg": "success",
+	"data": {
+		"photo": "http://img.xker.com/xkerfiles/allimg/1503/22202GX6-0.jpg",
+		"name": "真龙海韵",
+		"price": 800,
+		"priceLicence": "xxx号文件"
+	}
+});

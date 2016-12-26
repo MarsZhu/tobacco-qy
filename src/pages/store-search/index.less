@@ -1,0 +1,41 @@
+@import "src/widgets/search-box/index";
+
+html, body {
+	height: 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+
+body {
+	overflow-x: hidden;
+	background-color: #FBF9FE;
+}
+
+.container {
+	height: 100%;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	& > div {
+		background-color: #FBF9FE;
+	}
+
+	h3 {
+		font-weight: normal;
+		color: #333;
+		font-size: 16px;
+	}
+	p {
+		color: #999;
+		font-size: 14px;
+	}
+
+	b {
+		font-weight: normal;
+		color: #09BB07;
+	}
+
+	.spliter {
+		color: #e5e5e5;
+		padding: 0 10px;
+	}
+
+}

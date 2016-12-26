@@ -1,0 +1,46 @@
+<?php 
+
+echo<<<EOT
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>店铺详情</title>
+		<link rel="stylesheet" href="../../common/css/weui-min.css" rel="stylesheet" / />
+		<link rel="stylesheet" href="./index-min.css" rel="stylesheet" / />
+	</head>
+	<body ontouchstart>
+		<div class="container" id="container"></div>
+		<script id="product-detail-tpl" type="text/x-handlebars-template">
+			<div class="weui_cells">
+				<div class="weui_cell weui_cell_primary"><img src="{{photo}}" alt="" /></div>
+			</div>
+			
+			<div class="weui_cells weui_cells_access">
+				
+				<div class="weui_cell" href="javascript:;">
+					<div class="weui_cell_bd weui_cell_primary">
+						<h3>{{name}}</h3>
+					</div>
+				</div>
+				<div class="weui_cell" href="javascript:;">
+					<div class="weui_cell_bd weui_cell_primary">
+						<p>零售价格：{{price}}元/条</p>
+					</div>
+				</div>
+				<div class="weui_cell" href="javascript:;">
+					<div class="weui_cell_bd weui_cell_primary">
+						<p>价格文书：{{priceLicence}}</p>
+					</div>
+				</div>
+			
+			</div>
+		</script>
+		<script src="./index-combo-min.js" ></script>
+	</body>
+</html>
+
+EOT;
+
+?>

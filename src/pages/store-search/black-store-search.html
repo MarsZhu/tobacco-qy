@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>无证户查询</title>
+		<link rel="stylesheet" href="../../common/css/weui-min.css"/>
+		<link rel="stylesheet" href="./index-min.css"/>
+	</head>
+	<body ontouchstart>
+		<div class="container" id="container">
+			<div class="search-box-container">
+			<!--#include virtual="../../widgets/search-box/filter.html" -->
+			</div>
+		</div>
+		<script id="store-record-tpl" type="text/x-handlebars-template">
+			<a class="weui_cell" href="../store-detail/black-store-detail.html?storeId={{storeId}}">
+				<div class="weui_cell_bd weui_cell_primary">
+					<h3>{{{shopName}}}</h3>
+					<p><span>经营者：{{{keeperName}}}<span class="spliter">|</span>市管员：{{{administratorName}}}<span class="spliter">|</span>客户经理：{{{managerName}}}<span class="spliter">|</span>工商执法人员：{{{catchpoler}}}</span></p>
+				</div>
+			</a>
+		</script>
+		<script src="./black-store-search-combo-min.js"></script>
+	</body>
+</html>

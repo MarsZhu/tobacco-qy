@@ -1,0 +1,65 @@
+<?php 
+
+echo<<<EOT
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>许可证监管</title>
+		<link rel="stylesheet" href="../../common/css/weui.css" rel="stylesheet" / />
+		<link rel="stylesheet" href="./index.css" rel="stylesheet" / />
+	</head>
+	<body ontouchstart>
+		<div class="container" id="container">
+			
+			<div class="weui_cells weui_cells_access">
+				
+				<a class="weui_cell" href="../licence-list/index.html?warningType=1&ts=20161027">
+					<div class="weui_cell_hd">
+						<img class="licence-entry-icon" src="../../common/img/ic_xkzjg_01.png" alt="icon">
+					</div>
+					<div class="weui_cell_bd weui_cell_primary">
+						<p>许可证有效期预警</p>
+					</div>
+					<div class="weui_cell_ft"></div>
+				</a>
+				
+				<a class="weui_cell" href="../licence-list/index.html?warningType=2&ts=20161027">
+					<div class="weui_cell_hd">
+						<img class="licence-entry-icon" src="../../common/img/ic_xkzjg_02.png" alt="icon">
+					</div>
+					<div class="weui_cell_bd weui_cell_primary">
+						<p>新办证未经营预警</p>
+					</div>
+					<div class="weui_cell_ft"></div>
+				</a>
+				
+				<a class="weui_cell" href="../licence-list/index.html?warningType=3&ts=20161027">
+					<div class="weui_cell_hd">
+						<img class="licence-entry-icon" src="../../common/img/ic_xkzjg_03.png" alt="icon">
+					</div>
+					<div class="weui_cell_bd weui_cell_primary">
+						<p>停业到期预警</p>
+					</div>
+					<div class="weui_cell_ft"></div>
+				</a>
+				
+				<a class="weui_cell" href="../licence-list/index.html?warningType=4&ts=20161027">
+					<div class="weui_cell_hd">
+						<img class="licence-entry-icon" src="../../common/img/ic_xkzjg_04.png" alt="icon">
+					</div>
+					<div class="weui_cell_bd weui_cell_primary">
+						<p>擅自停业预警</p>
+					</div>
+					<div class="weui_cell_ft"></div>
+				</a>
+			
+			</div>
+		</div>
+	</body>
+</html>
+
+EOT;
+
+?>

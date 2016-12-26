@@ -1,0 +1,16 @@
+{
+  "name": "tobacco-qy",
+  "desc": "烟草局企业号",
+  "type": "video",
+  "group": "gxzy",
+  "version": "1.0.0",
+  "port": 80,
+  "author": {
+    "name": "梁冬",
+    "email": "aloysiousliang@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.alibaba-inc.com/de/ali-tvkit"
+  }
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>发送消息</title>
+		<link rel="stylesheet" href="../../common/css/weui-min.css" rel="stylesheet" / />
+		<link rel="stylesheet" href="./index-min.css" rel="stylesheet" / />
+	</head>
+	<body ontouchstart>
+		<div class="container" id="container">
+			<div class="weui_cells weui_cells_access">
+				<a class="weui_cell get-contactbook" href="javascript:;">
+					<div class="weui_cell_bd weui_cell_primary">
+						<h3>选择发送对象</h3>
+						<p></p>
+					</div>
+					<div class="weui_cell_ft"></div>
+				</a>
+			</div>
+
+			<div class="weui_cells weui_cells_form">
+				<div class="weui_cell">
+					<div class="weui_cell_bd weui_cell_primary">
+						<textarea class="weui_textarea" placeholder="输入发送内容" rows="4"></textarea>
+					</div>
+				</div>
+			</div>
+
+			<a href="javascript:;" class="weui_btn weui_btn_primary btn-send">发送</a>
+			
+			<div class="error-text" style="display:none;"></div>
+
+			<div class="contactbook-wrap">
+				<div class="weui_mask_transition" id="mask" style="z-index:3;"></div>
+				<div class="weui_actionsheet" id="weui_actionsheet" style="z-index:4;">
+					<div class="contactbook-main-wrap">
+						<div class="contactbook-main">
+							<div class="pannel-container">
+								<input type="hidden" id="supervisorIds" name="supervisorIds" value=""/>
+								<input type="hidden" id="marketerIds" name="marketerIds" value=""/>
+								<input type="hidden" id="retailGroupIds" name="retailGroupIds" value=""/>
+								<input type="hidden" id="storeIds" name="storeIds" value=""/>
+								<input type="hidden" id="catchpolerIds" name="catchpolerIds" value=""/>
+							</div>
+							<div class="search-box-container">
+								<div class="w-search-box">
+	<div class="weui_search_bar" id="search_bar">
+		<form class="weui_search_outer">
+			<div class="weui_search_inner">
+				<i class="weui_icon_search"></i>
+				<input type="search" class="weui_search_input" id="search_input" placeholder="搜索" required="">
+				<a href="javascript:" class="weui_icon_clear" id="search_clear"></a>
+			</div>
+			<label for="search_input" class="weui_search_text" id="search_text">
+				<i class="weui_icon_search"></i>
+				<span>搜索</span>
+			</label>
+		</form>
+		<a href="javascript:" class="weui_search_cancel" id="search_cancel">取消</a>
+	</div>
+	<div class="search-tips"></div>
+	<div class="weui_cells weui_cells_access search-show weui_cells_checkbox" id="search_show">
+	</div>
+</div>
+
+							</div>
+
+							<div class="contact-collection-wrap">
+
+								<div class="weui_cells weui_cells_checkbox weui_cells_access">
+									<div class="weui_cell weui_check_label contact-item contact-item-catchpoler" data-user-id="all" data-name="工商人员" data-avatar="../../common/img/pic_txl_xz.png" data-role="4">
+										<label class="weui_cell_hd">
+											<input type="checkbox" name="cb_supervisor_all" class="weui_check" id="cb_catchpoler_all" />
+											<i class="weui_icon_checked"></i>
+										</label>
+										<div class="weui_cell_bd weui_cell_primary">
+											<h3>工商人员</h3>
+										</div>
+										<div class="weui_cell_ft"></div>
+									</div>
+									<div class="contact-list-wrap"></div>
+								</div>
+								
+								<div class="weui_cells weui_cells_checkbox weui_cells_access">
+									<div class="weui_cell weui_check_label contact-item contact-item-supervisor" data-user-id="all" data-name="市管员" data-avatar="../../common/img/pic_txl_xz.png" data-role="1">
+										<label class="weui_cell_hd">
+											<input type="checkbox" name="cb_supervisor_all" class="weui_check" id="cb_supervisor_all" />
+											<i class="weui_icon_checked"></i>
+										</label>
+										<div class="weui_cell_bd weui_cell_primary">
+											<h3>市管员</h3>
+										</div>
+										<div class="weui_cell_ft"></div>
+									</div>
+									<div class="contact-list-wrap"></div>
+								</div>
+								
+								<div class="weui_cells weui_cells_checkbox weui_cells_access">
+									<div class="weui_cell weui_check_label contact-item contact-item-marketer" data-user-id="all" data-name="客户经理" data-avatar="../../common/img/pic_txl_xz.png" data-role="2">
+										<label class="weui_cell_hd">
+											<input type="checkbox" name="cb_marketer_all" class="weui_check" id="cb_marketer_all" />
+											<i class="weui_icon_checked"></i>
+										</label>
+										<div class="weui_cell_bd weui_cell_primary">
+											<h3>客户经理</h3>
+										</div>
+										<div class="weui_cell_ft"></div>
+									</div>
+									<div class="contact-list-wrap"></div>
+								</div>
+								
+								<div class="weui_cells weui_cells_checkbox weui_cells_access">
+									<div class="weui_cell weui_check_label contact-item contact-item-group" data-user-id="all" data-name="自律互助小组" data-avatar="../../common/img/pic_txl_xz.png" data-role="3">
+										<label class="weui_cell_hd">
+											<input type="checkbox" name="cb_group_all" class="weui_check" id="cb_group_all" />
+											<i class="weui_icon_checked"></i>
+										</label>
+										<div class="weui_cell_bd weui_cell_primary">
+											<h3>自律互助小组</h3>
+										</div>
+										<div class="weui_cell_ft"></div>
+									</div>
+									<div class="contact-list-wrap"></div>
+								</div>
+								
+								<div class="weui_cells weui_cells_checkbox weui_cells_access">
+									<div class="weui_cell weui_check_label contact-item contact-item-store" data-user-id="all" data-name="管辖的零售户" data-avatar="../../common/img/pic_txl_xz.png" data-role="0">
+										<label class="weui_cell_hd">
+											<input type="checkbox" name="cb_store_all" class="weui_check" id="cb_store_all" />
+											<i class="weui_icon_checked"></i>
+										</label>
+										<div class="weui_cell_bd weui_cell_primary">
+											<h3>管辖的零售户</h3>
+										</div>
+										<div class="weui_cell_ft"></div>
+									</div>
+									<div class="contact-list-wrap"></div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="contactbook-submit">
+						<a href="javascript:;" class="weui_btn weui_btn_primary btn-confirm">确认</a>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<script id="message-record-tpl" type="text/x-handlebars-template">
+			<div class="weui_cell weui_check_label contact-item contact-item-sub" data-user-id="{{userId}}" data-name="{{rawName}}" data-avatar="{{avatar}}" data-role="{{role}}">
+				<label class="weui_cell_hd">
+					<input type="checkbox" name="cb_{{userId}}" class="weui_check" id="cb_{{userId}}" {{#checked}}checked{{/checked}} {{#disabled}}disabled{{/disabled}}/>
+						<i class="weui_icon_checked"></i>
+				</label>
+				<img class="contact-avatar" src="{{avatar}}" alt="icon">
+				<div class="weui_cell_bd weui_cell_primary">
+					<h3>{{{name}}}</h3>
+					<p>{{description}}</p>
+				</div>
+			</div>
+		</script>
+		<script id="message-selected-item-tpl" type="text/x-handlebars-template">
+			<div class="selected-item" data-user-id="{{userId}}" data-role="{{role}}">
+				<img src="{{avatar}}" alt="" />
+				<div class="selected-item-name">{{name}}</div>
+				<div class="selected-item-delete" data-user-id="{{userId}}" data-role="{{role}}"></div>
+			</div>
+		</script>
+		<script src="./index-combo-min.js" ></script>
+	</body>
+</html>

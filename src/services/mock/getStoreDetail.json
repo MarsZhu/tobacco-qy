@@ -1,0 +1,60 @@
+cb({
+	"code": "0",
+	"msg": "success",
+	"data": {
+		"storeId": 213213,
+		"storeName": 'xxx店',
+		"photos": [
+			"http://img.xker.com/xkerfiles/allimg/1503/22202GX6-0.jpg",
+			"http://pic.58pic.com/58pic/15/53/77/33f58PICkne_1024.png",
+			"http://img4.imgtn.bdimg.com/it/u=1809765280,2044255278&fm=21&gp=0.jpg"
+		],
+		"owner": {
+			"name": "黄五",
+			"avatar": "http://img2.imgtn.bdimg.com/it/u=3937077330,1884229872&fm=21&gp=0.jpg"
+		},
+		"staffs": [
+			{
+				"name": "黄五",
+				"avatar": "http://img2.imgtn.bdimg.com/it/u=3937077330,1884229872&fm=21&gp=0.jpg"
+			},
+			{
+				"name": "黄五",
+				"avatar": "http://img2.imgtn.bdimg.com/it/u=3937077330,1884229872&fm=21&gp=0.jpg"
+			},
+			{
+				"name": "黄五",
+				"avatar": "http://img2.imgtn.bdimg.com/it/u=3937077330,1884229872&fm=21&gp=0.jpg"
+			},
+			{
+				"name": "黄五",
+				"avatar": "http://img2.imgtn.bdimg.com/it/u=3937077330,1884229872&fm=21&gp=0.jpg"
+			},
+			{
+				"name": "黄五",
+				"avatar": "http://img2.imgtn.bdimg.com/it/u=3937077330,1884229872&fm=21&gp=0.jpg"
+			},
+			{
+				"name": "黄五",
+				"avatar": "http://img2.imgtn.bdimg.com/it/u=3937077330,1884229872&fm=21&gp=0.jpg"
+			},
+			{
+				"name": "黄五",
+				"avatar": "http://img2.imgtn.bdimg.com/it/u=3937077330,1884229872&fm=21&gp=0.jpg"
+			}
+		],
+		"supervisorName": "张三",
+		"marketerName": "李四",
+		"licenceCode": "213123",
+		"customerCode": "213",
+		"address": "xx路",
+		"longitude": 116.417854,
+		"latitude": 39.921988,
+		"contact": 13700213,
+		"storeType": "A",
+		"salesData": 200,
+		"grants": 500,
+		"belongedGroupName": "xxx小组",
+		"belongedGroupId": 213
+	}
+});

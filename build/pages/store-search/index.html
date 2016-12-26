@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>零售户查询</title>
+		<link rel="stylesheet" href="../../common/css/weui-min.css" rel="stylesheet" / />
+		<link rel="stylesheet" href="./index-min.css" rel="stylesheet" / />
+	</head>
+	<body ontouchstart>
+		<div class="container" id="container">
+			<div class="search-box-container">
+			<div class="w-search-box">
+	<div class="weui_search_bar" id="search_bar">
+		<div class="search-filter" style="display:none;"><span></span></div>
+		<span class="search-spliter">|</span>
+		<form class="weui_search_outer">
+			<div class="weui_search_inner">
+				<i class="weui_icon_search"></i>
+				<input type="search" class="weui_search_input" id="search_input" placeholder="搜索" required="">
+				<a href="javascript:" class="weui_icon_clear" id="search_clear"></a>
+			</div>
+			<label for="search_input" class="weui_search_text" id="search_text">
+				<i class="weui_icon_search"></i>
+				<span>搜索</span>
+			</label>
+		</form>
+	</div>
+	<div class="search-tips"></div>
+	<div class="weui_cells weui_cells_access search-show" id="search_show">
+	</div>
+	<div id="actionSheet_wrap">
+		<div class="weui_mask_transition" id="mask" style="z-index:3;"></div>
+		<div class="weui_actionsheet" id="weui_actionsheet" style="z-index:4;">
+			<div class="weui_actionsheet_menu">
+			</div>
+			<div class="weui_actionsheet_action">
+				<div class="weui_actionsheet_cell search-filter-cancel" id="actionsheet_cancel">取消</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+			</div>
+		</div>
+		<script id="store-record-tpl" type="text/x-handlebars-template">
+			<a class="weui_cell" href="../store-detail/index.html?storeId={{storeId}}">
+				<div class="weui_cell_bd weui_cell_primary">
+					<h3>{{{storeName}}}</h3>
+					<p><span>持证人：{{{ownerName}}}<span class="spliter">|</span>市管员：{{{supervisorName}}}<span class="spliter">|</span>客户经理：{{{marketerName}}}</span></p>
+					<p><span>许可证：{{{licenceCode}}}<span class="spliter">|</span>客户编码：{{{customerCode}}}</span></p>
+				</div>
+			</a>
+		</script>
+		<script src="./index-combo-min.js" ></script>
+	</body>
+</html>

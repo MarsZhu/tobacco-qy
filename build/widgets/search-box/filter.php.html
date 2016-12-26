@@ -1,0 +1,37 @@
+<?php 
+
+echo<<<EOT
+<div class="w-search-box">
+	<div class="weui_search_bar" id="search_bar">
+		<div class="search-filter" style="display:none;"><span></span></div>
+		<span class="search-spliter">|</span>
+		<form class="weui_search_outer">
+			<div class="weui_search_inner">
+				<i class="weui_icon_search"></i>
+				<input type="search" class="weui_search_input" id="search_input" placeholder="搜索" required="">
+				<a href="javascript:" class="weui_icon_clear" id="search_clear"></a>
+			</div>
+			<label for="search_input" class="weui_search_text" id="search_text">
+				<i class="weui_icon_search"></i>
+				<span>搜索</span>
+			</label>
+		</form>
+	</div>
+	<div class="search-tips"></div>
+	<div class="weui_cells weui_cells_access search-show" id="search_show">
+	</div>
+	<div id="actionSheet_wrap">
+		<div class="weui_mask_transition" id="mask" style="z-index:3;"></div>
+		<div class="weui_actionsheet" id="weui_actionsheet" style="z-index:4;">
+			<div class="weui_actionsheet_menu">
+			</div>
+			<div class="weui_actionsheet_action">
+				<div class="weui_actionsheet_cell search-filter-cancel" id="actionsheet_cancel">取消</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+EOT;
+
+?>

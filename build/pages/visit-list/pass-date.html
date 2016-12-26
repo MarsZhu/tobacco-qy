@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>巡访计划</title>
+		<link rel="stylesheet" href="../../common/css/weui-min.css" rel="stylesheet" / />
+		<link rel="stylesheet" href="./index-min.css" rel="stylesheet" / />
+	</head>
+	<body ontouchstart>
+		<div class="container" id="container">
+			<div class="weui_cells visit-plan-list-wrap"></div>
+		</div>	
+		<script id="added-record-tpl" type="text/x-handlebars-template">
+			{{#each planList}}
+			<div class="weui_cell">
+				<div class="weui_cell_bd weui_cell_primary record-left">
+					<h3>{{{storeName}}}</h3>
+					<p>{{{address}}}</p>
+				</div>
+				<div class="weui_cell_bd visit-status">
+					{{#if hasVisited}}
+						<span class="visit-status-text">已巡访</span><img class="visit-icon" src="../../common/img/ic_xfjh_ok.png" alt="icon">
+					{{else}}
+						<span class="visit-status-text">未按时巡访</span><img class="visit-icon" src="../../common/img/ic_xfjh_no.png" alt="icon">
+					{{/if}}
+				</div>
+			</div>
+			{{/each}}
+		</script>
+		<script src="./index-combo-min.js" ></script>
+	</body>
+</html>

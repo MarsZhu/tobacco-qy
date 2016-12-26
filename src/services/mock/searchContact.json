@@ -1,0 +1,9 @@
+cb({
+	"code": "0",
+	"msg": "success",
+	"data": {
+		"contactList": [],
+		"count": 3,
+		"hasMore": true
+	}
+})

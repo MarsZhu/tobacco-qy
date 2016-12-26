@@ -1,0 +1,25 @@
+cb({
+	"code": "0",
+	"msg": "success",
+	"data": {
+		"storeName": "xx店",
+		"grants": 500,
+		"records": [
+			{
+				"event": "xx现场会",
+				"grantChange": 10,
+				"date": "2016-04-21"
+			},
+			{
+				"event": "xx现场会",
+				"grantChange": -10,
+				"date": "2016-04-21"
+			},
+			{
+				"event": "xx现场会",
+				"grantChange": 10,
+				"date": "2016-04-21"
+			}
+		]
+	}
+});

@@ -1,0 +1,22 @@
+cb({
+	"code": "0",
+	"msg": "success",
+	"data": [
+		{
+			"clientCode":"1450020000101",
+			"clientName":"李某某",
+			"consumerFile":11,
+			"weekRecord":11,
+			"weekUpload":5,
+			"todayScan":5
+		},
+		{
+			"clientCode":"1450020000101",
+			"clientName":"李某某烟酒茶专营店",
+			"consumerFile":11,
+			"weekRecord":11,
+			"weekUpload":5,
+			"todayScan":5
+		}
+	]
+});

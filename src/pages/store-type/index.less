@@ -1,0 +1,142 @@
+html, body {
+	height: 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+
+body {
+	overflow-x: hidden;
+	background-color: #FBF9FE;
+}
+
+.container {
+	height: 100%;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+
+	.weui_cells {
+		background-color: #ffffff;
+	}
+
+	p {
+		font-size: 14px;
+		color: #333;
+
+		span {
+			color: #666;
+			width: 4em;
+			margin-right: 20px;
+			display: inline-block;
+		}
+	}
+
+	.weui_cells {
+		margin-top: 0;
+		margin-bottom: 10px;
+	}
+
+	.selector-text {
+		margin: auto;
+		padding-top: 13px;
+		font-size: 14px;
+		color: #333;
+		width: 180px;
+		text-align: center;
+	}
+
+	.selector-main {
+		width: 150px;
+		height: 35px;
+		border: 1px solid #d9d9d9;
+		border-radius: 5px;
+		margin: auto;
+		margin-top: 10px;
+		margin-bottom: 16px;
+		box-sizing: border-box;
+		position: relative;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+
+		.selector-btn {
+			width: 35px;
+			height: 35px;
+			
+			span {
+				display: inline-block;
+				vertical-align: middle;
+				height: 35px;
+				line-height: 35px;
+			}
+		}
+
+		.selector-btn-left {
+			border-right: 1px solid #d9d9d9;
+
+			span:after {
+				content: " ";
+				display: inline-block;
+				-webkit-transform: rotate(-135deg);
+				transform: rotate(-135deg);
+				height: 6px;
+				width: 6px;
+				border-width: 2px 2px 0 0;
+				border-color: #999;
+				border-style: solid;
+				position: relative;
+				top: -2px;
+				left: 5px;
+				margin-left: .6em;
+			}
+		}
+		
+		.selector-btn-right {
+			border-left: 1px solid #d9d9d9;
+
+			span:after {
+				content: " ";
+				display: inline-block;
+				-webkit-transform: rotate(45deg);
+				transform: rotate(45deg);
+				height: 6px;
+				width: 6px;
+				border-width: 2px 2px 0 0;
+				border-color: #999;
+				border-style: solid;
+				position: relative;
+				top: -2px;
+				left: 2px;
+				margin-left: .6em;
+			}
+		}
+
+		.selector-select {
+			-webkit-box-flex: 1;
+			-webkit-flex: 1;
+			-ms-flex: 1;
+			flex: 1;
+			height: 35px;
+
+			select {
+				-webkit-appearance: none;
+				border: 0;
+				outline: 0;
+				background-color: transparent;
+				width: 100%;
+				font-size: inherit;
+				color: #33c700;
+				height: 35px;
+				line-height: 35px;
+				position: relative;
+				padding-left: 18px;
+				text-align: center;
+				font-weight: bold;
+			}
+		}
+	}
+
+}

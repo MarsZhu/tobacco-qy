@@ -1,0 +1,28 @@
+cb({
+	"code": "0",
+	"msg": "success",
+	"data": {
+		"storeList": [
+			{
+				"storeId": 1,
+				"storeName": "xxx烟酒店",
+				"address": "xxx路",
+				"status": 0
+			},
+			{
+				"storeId": 2,
+				"storeName": "xxx烟酒店",
+				"address": "xxx路",
+				"status": 0
+			},
+			{
+				"storeId": 3,
+				"storeName": "xxx烟酒店",
+				"address": "xxx路",
+				"status": 1
+			}
+		],
+		"count": 3,
+		"hasMore": true
+	}
+})

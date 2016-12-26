@@ -1,0 +1,159 @@
+@import "src/widgets/search-box/index";
+
+html, body {
+	height: 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+
+body {
+	overflow-x: hidden;
+	background-color: #FBF9FE;
+}
+
+.container {
+	height: 100%;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+
+	.get-contactbook {
+		p {
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+	}
+
+	.contact-avatar {
+		width: 40px;
+		height: 40px;
+		margin-right: 12px;
+	}
+
+	h3 {
+		font-size: 14px;
+		font-weight: normal;
+		color: #333;
+	}
+
+	p {
+		font-size: 14px;
+		color: #999;
+	}
+
+	b {
+		font-weight: normal;
+		color: #09BB07;
+	}
+
+	textarea {
+		font-size: 14px;
+	}
+
+	.weui_cells {
+		margin-top: 0;
+		margin-bottom: 10px;
+	}
+	
+
+	.weui_cells_form {
+		margin-bottom: 15px;
+	}
+
+	.weui_btn {
+		margin: 0 15px;
+	}
+
+	.weui_actionsheet {
+		height: 100%;
+		top: 0;
+		right: 0;
+		-webkit-transform: translate(100%, 0);
+		transform: translate(100%, 0);
+	}
+
+	.weui_actionsheet_toggle {
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0);
+	}
+
+	.contactbook-main-wrap {
+		height: 100%;
+		overflow-y: scroll;
+	}
+
+	.contactbook-main {
+		position: relative;
+		margin-bottom: 63px;
+	}
+
+	.contactbook-submit {
+		background-color: #fff;
+		border-top: 1px solid #D9D9D9;
+		position: fixed;
+		left: 0;
+		bottom :0;
+		width: 100%;
+
+		.weui_btn {
+			margin: 10px 15px;
+		}
+
+	}
+	
+	.pannel-container {
+		width: 100%;
+		position: absolute;
+		top: 45px;
+
+		.selected-item {
+			padding: 18px 0 5px 18px;
+			float: left;
+			position: relative;
+
+			img {
+				width: 60px;
+				height: 60px;
+			}
+
+			.selected-item-name {
+				width: 60px;
+				font-size: 14px;
+				color: #333;
+				margin-top: -6px;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+
+			.selected-item-delete {
+				position: absolute;
+				width: 25px;
+				height: 25px;
+				background: url('../../common/img/btn_delete.png') no-repeat;
+				background-size: 25px;
+				top: 6px;
+				right: -12px;
+			}
+		}
+	}
+
+	.weui_cell_ft {
+		font-size: 14px;
+	}
+	.weui_cells_checkbox .weui_check:disabled + .weui_icon_checked:before {
+		opacity: 0.3;
+	}
+
+	.contact-list-wrap {
+		.weui_cell:first-child:before {
+			display: block;
+		}
+	}
+
+	.error-text {
+		font-size: 14px;
+		color: red;
+		padding: 0 15px 15px 15px;
+	}
+
+}

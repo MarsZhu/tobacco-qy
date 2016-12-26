@@ -1,0 +1,53 @@
+<?php 
+
+echo<<<EOT
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>小组查询</title>
+		<link rel="stylesheet" href="../../common/css/weui-min.css" rel="stylesheet" / />
+		<link rel="stylesheet" href="./index-min.css" rel="stylesheet" / />
+	</head>
+	<body ontouchstart>
+		<div class="container" id="container">
+			<!--<a href="javascript:;" class="weui_btn weui_btn_primary">点击展现searchBar</a>-->
+			<div class="search-box-container">
+			<div class="w-search-box">
+	<div class="weui_search_bar" id="search_bar">
+		<form class="weui_search_outer">
+			<div class="weui_search_inner">
+				<i class="weui_icon_search"></i>
+				<input type="search" class="weui_search_input" id="search_input" placeholder="搜索" required="">
+				<a href="javascript:" class="weui_icon_clear" id="search_clear"></a>
+			</div>
+			<label for="search_input" class="weui_search_text" id="search_text">
+				<i class="weui_icon_search"></i>
+				<span>搜索</span>
+			</label>
+		</form>
+		<a href="javascript:" class="weui_search_cancel" id="search_cancel">取消</a>
+	</div>
+	<div class="search-tips"></div>
+	<div class="weui_cells weui_cells_access search-show" id="search_show">
+	</div>
+</div>
+
+			</div>
+		</div>
+		<script id="group-record-tpl" type="text/x-handlebars-template">
+			<a class="weui_cell" href="../group-detail/index.html?groupId={{groupId}}">
+				<div class="weui_cell_bd weui_cell_primary">
+					<h3>{{{groupName}}}</h3>
+					<p><span>市管员：{{{supervisorName}}}<span class="spliter">|</span>组长：{{{leaderName}}}</span></p>
+				</div>
+			</a>
+		</script>
+		<script src="./index-combo-min.js" ></script>
+	</body>
+</html>
+
+EOT;
+
+?>

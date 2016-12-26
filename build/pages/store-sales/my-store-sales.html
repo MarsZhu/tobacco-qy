@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>我的购销情况</title>
+		<link rel="stylesheet" href="../../common/css/weui-min.css" rel="stylesheet" / />
+		<link rel="stylesheet" href="./index-min.css" rel="stylesheet" / />
+	</head>
+	<body ontouchstart>
+		<div class="container" id="container">
+
+			<div class="weui_tab">
+				<div class="weui_navbar">
+					<div class="weui_navbar_item weui_bar_item_on" data-nav-index="1">
+						购销总量
+					</div>
+					<div class="weui_navbar_item" data-nav-index="2">
+						购进明细
+					</div>
+				</div>
+				<div class="weui_tab_bd">
+					<div class="tab-body tab-body-1 tab-body-on">
+						
+						<div class="weui_cells">
+							<div class="selector-text">选择查询年份</div>
+							
+							<div class="selector-main selector-main-ps-year">
+								<div class="selector-btn selector-btn-left"><span></span></div>							
+								<div class="selector-select">
+									<select name="psYear" id="psYear">
+										<option value="2016">2016</option>
+										<option value="2015">2015</option>
+										<option value="2014">2014</option>
+										<option value="2013">2013</option>
+									</select>
+								</div>							
+								<div class="selector-btn selector-btn-right"><span></span></div>							
+							</div>
+						
+						</div>
+
+						<div class="weui_cells" style="padding:5px;">
+							<canvas id="dataPurchases" style=""></canvas>
+						</div>
+						
+						<div class="weui_cells" style="padding:5px;">
+							<canvas id="dataSales" style=""></canvas>
+						</div>
+						
+					</div>
+					<div class="tab-body tab-body-2">
+					
+						<div class="weui_cells">
+							<div class="weui_cell weui_cell_primary">
+								<div class="weui_cell_primary">
+									<div class="selector-wrap">
+										<div class="selector-text">选择查询年份</div>
+										<div class="selector-main selector-main-pd-year">
+											<div class="selector-btn selector-btn-left"><span></span></div>							
+											<div class="selector-select">
+												<select name="pdYear" id="pdYear">
+													<option value="2016">2016</option>
+													<option value="2015">2015</option>
+													<option value="2014">2014</option>
+													<option value="2013">2013</option>
+												</select>
+											</div>							
+											<div class="selector-btn selector-btn-right"><span></span></div>							
+										</div>
+									</div>
+								</div>
+								
+								<div class="weui_cell_primary">
+									<div class="selector-wrap">
+										<div class="selector-text">选择查询月份</div>
+										<div class="selector-main selector-main-pd-month">
+											<div class="selector-btn selector-btn-left"><span></span></div>							
+											<div class="selector-select">
+												<select name="pdMonth" id="pdMonth">
+													<option value="1">01</option>
+													<option value="2">02</option>
+													<option value="3">03</option>
+													<option value="4">04</option>
+													<option value="5">05</option>
+													<option value="6">06</option>
+													<option value="7">07</option>
+													<option value="8">08</option>
+													<option value="9">09</option>
+													<option value="10">10</option>
+													<option value="11">11</option>
+													<option value="12">12</option>
+												</select>
+											</div>							
+											<div class="selector-btn selector-btn-right"><span></span></div>							
+										</div>
+									</div>
+								</div>
+							</div>
+						
+						</div>
+
+						<div class="weui_cells" style="padding:5px;">
+							<canvas id="dataTotalQuantity" style=""></canvas>
+						</div>
+						
+						<div class="weui_cells" style="padding:5px;">
+							<canvas id="dataTotalAmount" style=""></canvas>
+						</div>
+						
+						<div class="weui_cells" style="padding:5px;">
+							<canvas id="dataGrossProfit" style=""></canvas>
+						</div>
+						
+						<div class="weui_cells" style="padding:5px;">
+							<div class="tb-title">重点规格购进情况</div>
+							<div id="dataBrand" style="">
+								<table border="1">
+								</table>
+							</div>
+						</div>
+					
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<script src="./my-store-sales-combo-min.js?ts=20161027" ></script>
+	</body>
+</html>

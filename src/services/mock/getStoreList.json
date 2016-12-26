@@ -1,0 +1,25 @@
+{
+	"code": "0",
+	"msg": "success",
+	"data": {
+		"list": [
+			{
+				"storeId": 5,
+				"ownerName": "张三好长好长好长",
+				"storeName": "xxx烟酒店"
+			},
+			{
+				"storeId": 51,
+				"ownerName": "李四",
+				"storeName": "xxx烟酒店"
+			},
+			{
+				"storeId": 4,
+				"ownerName": "王4",
+				"storeName": "xxx烟酒店"
+			}
+		],
+		"count": 3,
+		"hasMore": true
+	}
+}

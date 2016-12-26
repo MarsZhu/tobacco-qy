@@ -1,0 +1,67 @@
+<?php 
+
+echo<<<EOT
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>巡访计划评价</title>
+		<link rel="stylesheet" href="../../common/css/weui-min.css" rel="stylesheet" / />
+		<link rel="stylesheet" href="./index-min.css" rel="stylesheet" / />
+	</head>
+	<body ontouchstart>
+		<div class="container" id="container"></div>
+		<script id="visit-comment-tpl" type="text/x-handlebars-template">
+			<div class="comment-bg {{#if isComment}}comment-bg-success{{/if}}"></div>
+
+			<div class="weui_cells">
+				<div class="weui_cell visit-detail">
+					{{staffName}}在{{date}}完成了对您店铺的巡访工作，{{#if isComment}}您已经对他（她）的工作做出了评价！{{else}}请对他（她）的工作进行评价！{{/if}}
+				</div>
+			</div>
+			<div class="weui_cells">
+				<div class="weui_cell">
+					<div class="weui_cell_hd">总体评价 <em>＊</em></div>
+					<div class="weui_cell_bd weui_cell_primary">
+						{{#each starVal}}
+						<div class="star {{#if this}}star-on{{/if}}" data-index="{{@index}}"></div>
+						{{/each}}
+						<div class="star-level-text">
+							{{starLevelText}}	
+						</div>
+					</div>
+				</div>
+			</div>
+
+			{{#if isComment}}
+				{{#if commentText}}
+				<div class="weui_cells weui_cells_form">
+					<div class="weui_cell">
+						<div class="weui_cell_bd weui_cell_primary">
+							<textarea class="weui_textarea" placeholder="你可以详细在这里评价一下哦" rows="4" disabled>{{commentText}}</textarea>
+						</div>
+					</div>
+				</div>
+				{{/if}}
+			{{else}}
+			<div class="weui_cells weui_cells_form">
+				<div class="weui_cell">
+					<div class="weui_cell_bd weui_cell_primary">
+						<textarea class="weui_textarea" placeholder="你可以详细在这里评价一下哦" rows="4"></textarea>
+					</div>
+				</div>
+			</div>
+			{{/if}}
+			{{#if isComment}}
+			{{else}}
+			<a href="javascript:;" class="weui_btn weui_btn_primary weui_btn_disabled btn-submit">评价</a>
+			{{/if}}
+		</script>
+		<script src="./index-combo-min.js" ></script>
+	</body>
+</html>
+
+EOT;
+
+?>

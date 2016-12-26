@@ -1,0 +1,10 @@
+{
+	"code": "0",
+	"msg": "success",
+	"data": {
+		"supervisorCount": 30,
+		"marketerCount": 30,
+		"retailGroupCount": 15,
+		"storeCount": 150
+	}
+}

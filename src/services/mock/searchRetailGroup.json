@@ -1,0 +1,28 @@
+cb({
+	"code": "0",
+	"msg": "success",
+	"data": {
+		"retailGroupList": [
+			{
+				"groupId": 1,
+				"groupName": "111自律小组",
+				"supervisorName": "张三",
+				"leaderName": "李四"
+			},
+			{
+				"groupId": 2,
+				"groupName": "111自律小组",
+				"supervisorName": "张三",
+				"leaderName": "李四"
+			},
+			{
+				"groupId": 3,
+				"groupName": "111自律小组",
+				"supervisorName": "张三",
+				"leaderName": "李四"
+			}
+		],
+		"count": 3,
+		"hasMore": true
+	}
+})

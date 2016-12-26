@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>卷烟核价</title>
+		<link rel="stylesheet" href="../../common/css/weui-min.css"/>
+		<link rel="stylesheet" href="./index-min.css"/>
+	</head>
+	<body ontouchstart>
+		<div class="container" id="container">
+			
+			<div class="weui_tab">
+				<div class="weui_navbar">
+					<a class="weui_navbar_item" data-nav-index="1" href="http://qy.iyiplus.com/res/scan-search.html">
+						扫码核价
+					</a>
+					<div class="weui_navbar_item weui_bar_item_on" data-nav-index="2">
+						搜索核价
+					</div>
+				</div>
+				<div class="weui_tab_bd">
+					<div class="tab-body tab-body-2 tab-body-on">
+						<div class="search-box-container">
+						<!--#include virtual="../../widgets/search-box/index.html" -->
+						</div>
+					</div>
+				</div>
+			
+		</div>
+		<script id="product-record-tpl" type="text/x-handlebars-template">
+			<a class="weui_cell" href="../product-detail/index.html?productId={{productId}}">
+				<div class="weui_cell_bd weui_cell_primary">
+					<p>{{{name}}}</p>
+				</div>
+				<div class="weui_cell_bd weui_cell_primary item-right">
+					<p>{{{price}}}元/条</p>
+				</div>
+			</a>
+		</script>
+		<script src="./index-combo-min.js"></script>
+	</body>
+</html>

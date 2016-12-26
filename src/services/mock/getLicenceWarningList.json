@@ -1,0 +1,26 @@
+cb({
+	"code": "0",
+	"msg": "success",
+	"data": {
+		"storeList": [
+			{
+				"storeId": 1,
+				"storeName": "xx店",
+				"date": "2016-04-21",
+				"contact": 123123
+			},
+			{
+				"storeId": 2,
+				"storeName": "xx店",
+				"date": "2016-04-21",
+				"contact": 123123
+			},
+			{
+				"storeId": 3,
+				"storeName": "xx店",
+				"date": "2016-04-21",
+				"contact": 123123
+			}
+		]	
+	}
+});

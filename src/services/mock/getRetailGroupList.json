@@ -1,0 +1,18 @@
+{
+	"code": "0",
+	"msg": "success",
+	"data": {
+		"list": [
+			{
+				"groupId": 32134,
+				"name": "xxx小组"
+			},
+			{
+				"groupId": 3523432,
+				"name": "yyy小组"
+			}
+		],
+		"count": 2,
+		"hasMore": true
+	}
+}

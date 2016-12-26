@@ -1,0 +1,176 @@
+.w-search-box {
+  color: #666;
+}
+.w-search-box .search-filter {
+  width: 7em;
+  padding: 0 6px 0 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #09BB07;
+  line-height: 28px;
+}
+.w-search-box .search-filter span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.w-search-box .search-filter span:after {
+  content: " ";
+  display: inline-block;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  height: 6px;
+  width: 6px;
+  border-width: 2px 2px 0 0;
+  border-color: #999;
+  border-style: solid;
+  position: relative;
+  top: -3px;
+  margin-left: .6em;
+}
+.w-search-box .search-spliter {
+  color: #e5e5e5;
+  margin-right: 10px;
+}
+.w-search-box .search-show {
+  margin-top: 0;
+  font-size: 14px;
+}
+.w-search-box .search-tips {
+  position: relative;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+  text-align: center;
+}
+.w-search-box .search-list-empty {
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  padding: 15px;
+}
+html,
+body {
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  overflow-x: hidden;
+  background-color: #FBF9FE;
+}
+.container {
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.container .get-contactbook p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.container .contact-avatar {
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+}
+.container h3 {
+  font-size: 14px;
+  font-weight: normal;
+  color: #333;
+}
+.container p {
+  font-size: 14px;
+  color: #999;
+}
+.container b {
+  font-weight: normal;
+  color: #09BB07;
+}
+.container textarea {
+  font-size: 14px;
+}
+.container .weui_cells {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.container .weui_cells_form {
+  margin-bottom: 15px;
+}
+.container .weui_btn {
+  margin: 0 15px;
+}
+.container .weui_actionsheet {
+  height: 100%;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(100%, 0);
+  transform: translate(100%, 0);
+}
+.container .weui_actionsheet_toggle {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.container .contactbook-main-wrap {
+  height: 100%;
+  overflow-y: scroll;
+}
+.container .contactbook-main {
+  position: relative;
+  margin-bottom: 63px;
+}
+.container .contactbook-submit {
+  background-color: #fff;
+  border-top: 1px solid #D9D9D9;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.container .contactbook-submit .weui_btn {
+  margin: 10px 15px;
+}
+.container .pannel-container {
+  width: 100%;
+  position: absolute;
+  top: 45px;
+}
+.container .pannel-container .selected-item {
+  padding: 18px 0 5px 18px;
+  float: left;
+  position: relative;
+}
+.container .pannel-container .selected-item img {
+  width: 60px;
+  height: 60px;
+}
+.container .pannel-container .selected-item .selected-item-name {
+  width: 60px;
+  font-size: 14px;
+  color: #333;
+  margin-top: -6px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.container .pannel-container .selected-item .selected-item-delete {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: url('../../common/img/btn_delete.png') no-repeat;
+  background-size: 25px;
+  top: 6px;
+  right: -12px;
+}
+.container .weui_cell_ft {
+  font-size: 14px;
+}
+.container .weui_cells_checkbox .weui_check:disabled + .weui_icon_checked:before {
+  opacity: 0.3;
+}
+.container .contact-list-wrap .weui_cell:first-child:before {
+  display: block;
+}
+.container .error-text {
+  font-size: 14px;
+  color: red;
+  padding: 0 15px 15px 15px;
+}

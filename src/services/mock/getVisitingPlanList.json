@@ -1,0 +1,30 @@
+cb({
+	"code": "0",
+	"msg": "success",
+	"data": {
+		"date": "20160606",
+		"planList": [
+			{
+				"planId": 1,
+				"storeId": 1,
+				"storeName": "xxx店",
+				"address": "xxx路",
+				"planStatus": 0
+			},
+			{
+				"planId": 2,
+				"storeId": 2,
+				"storeName": "xxx店",
+				"address": "xxx路",
+				"planStatus": 1
+			},
+			{
+				"planId": 3,
+				"storeId": 3,
+				"storeName": "xxx店",
+				"address": "xxx路",
+				"planStatus": 2
+			}
+		],
+	}
+})

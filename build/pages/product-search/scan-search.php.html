@@ -1,0 +1,39 @@
+<?php 
+
+echo<<<EOT
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>卷烟核价</title>
+		<link rel="stylesheet" href="http://g.tbcdn.cn/gxzy/tobacco-qy/1.0.0/common/css/weui-min.css" rel="stylesheet" / />
+		<link rel="stylesheet" href="http://g.tbcdn.cn/gxzy/tobacco-qy/1.0.0/pages/product-search/index-min.css" rel="stylesheet" / />
+	</head>
+	<body ontouchstart>
+		<div class="container" id="container">
+			
+			<div class="weui_tab">
+				<div class="weui_navbar">
+					<div class="weui_navbar_item weui_bar_item_on" data-nav-index="1">
+						扫码核价
+					</div>
+					<a class="weui_navbar_item" data-nav-index="2" href="http://g.tbcdn.cn/gxzy/tobacco-qy/1.0.0/pages/product-search/index.html">
+						搜索核价
+					</a>
+				</div>
+				<div class="weui_tab_bd">
+					<div class="tab-body tab-body-1 tab-body-on">
+						<a href="javascript:;" class="weui_btn weui_btn_disabled weui_btn_primary scan-btn">扫一扫条码</a>
+					</div>
+				</div>
+			
+		</div>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js" ></script>
+		<script src="http://g.tbcdn.cn/gxzy/tobacco-qy/1.0.0/pages/product-search/scan-search-combo-min.js" ></script>
+	</body>
+</html>
+
+EOT;
+
+?>

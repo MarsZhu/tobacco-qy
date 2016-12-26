@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<meta name="format-detection" content="telephone=no" />
+		<title>我的小组</title>
+		<link rel="stylesheet" href="../../common/css/weui-min.css"/>
+		<link rel="stylesheet" href="./index-min.css"/>
+	</head>
+	<body ontouchstart>
+		<div class="container" id="container">
+		
+			<div class="group-member-wrap">
+				<div class="weui_mask_transition" id="mask" style="z-index:3;"></div>
+				<div class="weui_actionsheet" id="weui_actionsheet" style="z-index:4;">
+					<div class="member-main-wrap">
+						<div class="member-main"></div>
+					</div>
+
+					<div class="group-member-return">
+						<a href="javascript:;" class="weui_btn weui_btn_primary btn-return">返回</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<script id="group-detail-tpl" type="text/x-handlebars-template">
+			<div class="weui_cells weui_cells_access to-group-member">
+				<div class="weui_cell">
+					<div class="weui_cell_hd">
+						<img class="group-avatar" src="../../common/img/pic_xzxq_xz.png" alt="icon">
+					</div>
+					<div class="weui_cell_bd weui_cell_primary">
+						<h3>{{groupName}}</h3>
+						<p><span>市管员：{{supervisorName}}<span class="spliter">|</span>组长：{{leaderName}}</span></p>
+					</div>
+					<div class="weui_cell_ft"></div>
+				</div>
+			</div>
+
+			{{#if awards}}
+			<!--
+			<div class="weui_cells_title group-detail-title">
+				<div><img class="type-icon" src="../../common/img/ic_xzxq_xzz.png" alt="icon" /></div>
+				<div class="weui_cell_primary">小组荣耀</div>
+			</div>
+			<div class="weui_cells">
+				{{#each awards}}
+				<div class="weui_cell">
+					<div class="weui_cell_bd weui_cell_primary">
+						<h3>{{this}}</h3>
+					</div>
+				</div>
+				{{/each}}
+			</div>
+			-->
+			{{/if}}
+
+			{{#if photos}}
+			<div class="weui_cells_title group-detail-title">
+				<div><img class="type-icon" src="../../common/img/ic_xzxq_xxzhj.png" alt="icon" /></div>
+				<div class="weui_cell_primary">小组之家环境</div>
+			</div>
+			<div class="weui_cells">
+				<div style="padding: 15px 15px;">
+					{{#each photos}}
+					<div class="group-photo">
+						<img src="{{this}}" alt="group photo" class="group-photo-item"/>
+					</div>
+					{{/each}}
+				</div>
+			</div>
+			{{/if}}
+
+			{{#if rules}}
+			<div class="weui_cells_title group-detail-title">
+				<div><img class="type-icon" src="../../common/img/ic_xzxq_zc.png" alt="icon" /></div>
+				<div class="weui_cell_primary">小组之家特色</div>
+			</div>
+			<div class="weui_cells group-rule">
+				<div style="padding: 15px 15px;">
+					{{{rules}}}
+				</div>
+			</div>
+			{{/if}}
+			<a href="../group-search/index.html" class="weui_btn weui_btn_primary group-button">逛逛其他小组</a>
+		</script>
+		<script id="group-member-tpl" type="text/x-handlebars-template">
+							<div class="weui_cells group-member-top">
+								<div class="weui_cell">
+									<div class="weui_cell_bd weui_cell_primary">
+										<p>市管员</p>
+									</div>
+									<div class="weui_cell_ft">
+										{{supervisorName}}
+									</div>
+								</div>
+								<div class="weui_cell">
+									<div class="weui_cell_bd weui_cell_primary">
+										<p>客户经理</p>
+									</div>
+									<div class="weui_cell_ft">
+										{{marketerName}}
+									</div>
+								</div>
+								<div class="weui_cell">
+									<div class="weui_cell_bd weui_cell_primary">
+										<p>工商执法人员</p>
+									</div>
+									<div class="weui_cell_ft">
+										{{catchpolerName}}
+									</div>
+								</div>
+								<div class="weui_cell">
+									<div class="weui_cell_bd weui_cell_primary">
+										<p>组长</p>
+									</div>
+									<div class="weui_cell_ft">
+										{{leaderName}}
+									</div>
+								</div>
+								<div class="weui_cell">
+									<div class="weui_cell_bd weui_cell_primary">
+										<p>小组之家</p>
+									</div>
+									<div class="weui_cell_ft">
+										{{groupAddress}}
+									</div>
+								</div>
+							</div>
+							
+							<div class="weui_cells_title group-detail-title">
+								<div><img class="type-icon" src="../../common/img/ic_xzxq_xzry.png" alt="icon" /></div>
+								<div class="weui_cell_primary">小组成员名单</div>
+							</div>
+							<div class="weui_cells">
+								{{#each members}}
+								<div class="weui_cell">
+									<div class="weui_cell_bd weui_cell_primary">
+										<h3>{{storeName}}<span class="spliter">|</span>{{ownerName}}</h3>
+										<p>{{storeAddress}}</p>
+									</div>
+								</div>
+								{{/each}}
+							</div>
+		</script>
+		<script src="./my-group-detail-combo-min.js"></script>
+	</body>
+</html>

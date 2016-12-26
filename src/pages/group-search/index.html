@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>小组查询</title>
+		<link rel="stylesheet" href="../../common/css/weui-min.css"/>
+		<link rel="stylesheet" href="./index-min.css"/>
+	</head>
+	<body ontouchstart>
+		<div class="container" id="container">
+			<!--<a href="javascript:;" class="weui_btn weui_btn_primary">点击展现searchBar</a>-->
+			<div class="search-box-container">
+			<!--#include virtual="../../widgets/search-box/index.html" -->
+			</div>
+		</div>
+		<script id="group-record-tpl" type="text/x-handlebars-template">
+			<a class="weui_cell" href="../group-detail/index.html?groupId={{groupId}}">
+				<div class="weui_cell_bd weui_cell_primary">
+					<h3>{{{groupName}}}</h3>
+					<p><span>市管员：{{{supervisorName}}}<span class="spliter">|</span>组长：{{{leaderName}}}</span></p>
+				</div>
+			</a>
+		</script>
+		<script src="./index-combo-min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,16 @@
+cb({
+	"code": "0",
+	"msg": "success",
+	"data": {
+		"date": "20160606",
+		"storeName": "xxx店",
+		"supervisorName": "张三",
+		"marketerName": "李四",
+		"ownerName": "王五",
+		"extWork": "xxxx",
+		"isSubmit": true,
+		"isComment": false,
+		"commentStar": 4,
+		"commentText": "good"
+	}
+});

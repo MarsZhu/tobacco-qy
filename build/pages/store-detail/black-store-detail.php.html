@@ -1,0 +1,174 @@
+<?php 
+
+echo<<<EOT
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<meta name="format-detection" content="telephone=no" />
+		<title>无证户详情</title>
+		<link rel="stylesheet" href="../../common/css/weui-min.css" rel="stylesheet" / />
+		<link rel="stylesheet" href="./index-min.css" rel="stylesheet" / />
+	</head>
+	<body ontouchstart>
+		<div class="container" id="container">
+			
+			<div class="store-address-wrap">
+				<div class="weui_mask_transition address-mask"  style="z-index:3;"></div>
+				<div class="weui_actionsheet address-actionsheet" style="z-index:4;">
+					<div class="address-main-wrap">
+						<div class="address-main">
+							
+								
+						</div>
+					</div>
+					<div class="store-address-return">
+						<a href="javascript:;" class="weui_btn weui_btn_primary address-btn-return">返回</a>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+		<script id="store-detail-tpl" type="text/x-handlebars-template">
+			
+			<div class="weui_cells weui_cells_access">
+				
+				<div class="weui_cell to-store-member" href="javascript:;">
+					<div class="weui_cell_hd">
+						<img class="store-detail-icon" src="../../common/img/ic_yjdxq_01.png" alt="icon">
+					</div>
+					<div class="weui_cell_bd weui_cell_primary">
+						<p>经营者：{{keeperName}}</p>
+					</div>
+				</div>
+
+				<div class="weui_cell">
+					<div class="weui_cell_hd">
+						<img class="store-detail-icon" src="../../common/img/ic_yjdxq_02.png" alt="icon">
+					</div>
+					<div class="weui_cell_bd weui_cell_primary">
+						<p>无证户编码：{{storeId}}</p>
+					</div>
+				</div>
+				
+				<div class="weui_cell">
+					<div class="weui_cell_hd">
+						<img class="store-detail-icon" src="../../common/img/ic_yjdxq_03.png" alt="icon">
+					</div>
+					<div class="weui_cell_bd weui_cell_primary">
+						<p>查处时间：{{date}}</p>
+					</div>
+				</div>
+				
+				<a class="weui_cell to-store-address" href="javascript:;">
+					<div class="weui_cell_hd">
+						<img class="store-detail-icon" src="../../common/img/ic_yjdxq_04.png" alt="icon">
+					</div>
+					<div class="weui_cell_bd weui_cell_primary">
+						<p>经营地址：{{address}}</p>
+					</div>
+					<div class="weui_cell_ft"></div>
+				</a>
+
+				<div class="weui_cell">
+					<div class="weui_cell_hd">
+						<img class="store-detail-icon" src="../../common/img/ic_yjdxq_06.png" alt="icon">
+					</div>
+					<div class="weui_cell_bd weui_cell_primary">
+						<p>经营业态：{{type}}</p>
+					</div>
+				</div>
+				
+				<div class="weui_cell">
+					<div class="weui_cell_hd">
+						<img class="store-detail-icon" src="../../common/img/ic_yjdxq_07.png" alt="icon">
+					</div>
+					<div class="weui_cell_bd weui_cell_primary">
+						<p>经营性质：{{nature}}</p>
+					</div>
+				</div>
+				
+				<div class="weui_cell">
+					<div class="weui_cell_hd">
+						<img class="store-detail-icon" src="../../common/img/ic_yjdxq_08.png" alt="icon">
+					</div>
+					<div class="weui_cell_bd weui_cell_primary">
+						<p>经营时间：{{time}}</p>
+					</div>
+				</div>
+				
+				<div class="weui_cell">
+					<div class="weui_cell_hd">
+						<img class="store-detail-icon" src="../../common/img/ic_yjdxq_11.png" alt="icon">
+					</div>
+					<div class="weui_cell_bd weui_cell_primary">
+						<p>工商执法人员：{{catchpoler}}</p>
+					</div>
+				</div>
+				
+				<div class="weui_cell">
+					<div class="weui_cell_hd">
+						<img class="store-detail-icon" src="../../common/img/ic_yjdxq_09.png" alt="icon">
+					</div>
+					<div class="weui_cell_bd weui_cell_primary">
+						<p>市管员：{{administratorName}}</p>
+					</div>
+				</div>
+
+				<div class="weui_cell">
+					<div class="weui_cell_hd">
+						<img class="store-detail-icon" src="../../common/img/ic_yjdxq_10.png" alt="icon">
+					</div>
+					<div class="weui_cell_bd weui_cell_primary">
+						<p>客户经理：{{managerName}}</p>
+					</div>
+				</div>
+
+			</div>
+		</script>
+		<script id="store-member-tpl" type="text/x-handlebars-template">
+			<div class="weui_cells weui_cells_access">
+				<div class="weui_cell">
+					<div class="weui_cell_hd">
+						<img class="store-avatar" src="{{owner.avatar}}" alt="icon">
+					</div>
+					<div class="weui_cell_bd weui_cell_primary">
+						<h3>{{owner.name}}</h3>
+						<p><span>持证人</span></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="weui_cells_title store-member-title">
+				<div class="weui_cell_primary">从业人员</div>
+			</div>
+			<div class="weui_cells">
+				<div class="store-member-cell">
+					{{#each staffs}}
+						<div class="store-member-wrap">
+							<img src="{{avatar}}" alt="avatar" class="store-member-avatar"/>
+							<div class="store-member-name">{{name}}</div>
+						</div>
+					{{/each}}
+				</div>
+			</div>
+		</script>
+		<script id="store-address-tpl" type="text/x-handlebars-template">
+				<div class="weui_cells" style="margin-top: 0;">
+					<div class="weui_cell" href="javascript:;">
+						<div class="weui_cell_bd weui_cell_primary">
+							<p><span>经营地址：</span>{{address}}</p>
+						</div>
+					</div>
+				</div>
+				<div id="allmap" style="height:100%;"></div>
+		</script>
+		<script src="http://api.map.baidu.com/api?v=2.0&ak=lGjM9wxc6m458d6bPAzQP5HKW41sSeKi" type="text/javascript"></script>
+		<script src="./black-store-detail-combo-min.js" ></script>
+	</body>
+</html>
+
+EOT;
+
+?>

@@ -1,0 +1,25 @@
+cb({
+	"code": "0",
+	"msg": "success",
+	"data": {
+		"productList": [
+			{
+				"productId": 1,
+				"name": "真龙海韵细支",
+				"price": 800
+			},
+			{
+				"productId": 2,
+				"name": "真龙海韵细支",
+				"price": 800
+			},
+			{
+				"productId": 3,
+				"name": "真龙海韵细支",
+				"price": 800
+			}
+		],
+		"count": 3,
+		"hasMore": true
+	}
+})

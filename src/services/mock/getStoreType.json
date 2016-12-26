@@ -1,0 +1,13 @@
+cb({
+	"code": "0",
+	"msg": "success",
+	"data": {
+		"year": 2016,
+		"typeList": [
+			"A", "A", "B", 
+			"A", "B", "B", 
+			"A", "A", "B", 
+			"A", "A", "A"
+		]
+	}
+})

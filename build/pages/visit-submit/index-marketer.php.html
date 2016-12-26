@@ -1,0 +1,81 @@
+<?php 
+
+echo<<<EOT
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>提交巡访计划</title>
+		<link rel="stylesheet" href="http://g.tbcdn.cn/gxzy/tobacco-qy/1.0.0/common/css/weui-min.css" rel="stylesheet" / />
+		<link rel="stylesheet" href="http://g.tbcdn.cn/gxzy/tobacco-qy/1.0.0/pages/visit-submit/index-min.css" rel="stylesheet" / />
+	</head>
+	<body ontouchstart>
+		<div class="container" id="container">
+			<div class="weui_cells">
+				<div class="weui_cell visit-detail"></div>
+				<div class="weui_cell">
+					<div class="weui_cell_bd weui_cell_primary record-left">
+						<h3>工作内容一</h3>
+						<p>客户服务：卷烟知识宣传、行业政策宣传、阶段货源宣传、新客户经营服务、订单指导服务、基础信息维护等</p>
+					</div>
+					<div class="weui_cell_bd weui_cell_primary record-right">
+						<span class="check-text">未完成</span><span class="record-icon"></span>
+					</div>
+				</div>
+				<div class="weui_cell">
+					<div class="weui_cell_bd weui_cell_primary record-left">
+						<h3>工作内容二</h3>
+						<p>经营指导：销售技巧指导、节日销售指导、精准营销分析、库存指导、市场信息收集与反馈等</p>
+					</div>
+					<div class="weui_cell_bd weui_cell_primary record-right">
+						<span class="check-text">未完成</span><span class="record-icon"></span>
+					</div>
+				</div>
+				<div class="weui_cell">
+					<div class="weui_cell_bd weui_cell_primary record-left">
+						<h3>工作内容三</h3>
+						<p>品牌培育：品牌上柜指导、品牌组合指导、品牌宽度指导、重点品牌销售指导、品牌替代指导等</p>
+					</div>
+					<div class="weui_cell_bd weui_cell_primary record-right">
+						<span class="check-text">未完成</span><span class="record-icon"></span>
+					</div>
+				</div>
+				<div class="weui_cell">
+					<div class="weui_cell_bd weui_cell_primary record-left">
+						<h3>工作内容四</h3>
+						<p>市场维护：销售活动监督、市场信息收集、消费者信息收集、市场价格维护、价格标签维护、客户抱怨处理、投诉举报受理等</p>
+					</div>
+					<div class="weui_cell_bd weui_cell_primary record-right">
+						<span class="check-text">未完成</span><span class="record-icon"></span>
+					</div>
+				</div>
+				<div class="weui_cell">
+					<div class="weui_cell_bd weui_cell_primary record-left">
+						<h3>工作内容五</h3>
+						<p>现代终端建设：现代终端标准宣传、店面卫生维护、卷烟陈列维护、信息系统维护和规范使用指导、非烟商品陈列指导等</p>
+					</div>
+					<div class="weui_cell_bd weui_cell_primary record-right">
+						<span class="check-text">未完成</span><span class="record-icon"></span>
+					</div>
+				</div>
+			</div>
+			<div class="weui_cells weui_cells_form">
+				<div class="weui_cell">
+					<div class="weui_cell_bd weui_cell_primary">
+						<textarea class="weui_textarea" placeholder="请输入更多工作内容" rows="4"></textarea>
+					</div>
+				</div>
+			</div>
+			
+			<a class="weui_btn weui_btn_primary weui_btn_disabled btn-submit">确认提交</a>
+			<div class="submit-tips">* 请在零售户店铺有效范围内提交巡访，否则提交无效！</div>
+		</div>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js" ></script>
+		<script src="http://g.tbcdn.cn/gxzy/tobacco-qy/1.0.0/pages/visit-submit/index-combo-min.js" ></script>
+	</body>
+</html>
+
+EOT;
+
+?>

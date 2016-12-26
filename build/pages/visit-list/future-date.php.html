@@ -1,0 +1,95 @@
+<?php 
+
+echo<<<EOT
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>巡访计划</title>
+		<link rel="stylesheet" href="../../common/css/weui-min.css" rel="stylesheet" / />
+		<link rel="stylesheet" href="./index-min.css" rel="stylesheet" / />
+	</head>
+	<body ontouchstart>
+		<div class="container" id="container">
+
+			<div class="weui_navbar">
+				<div class="weui_navbar_item weui_bar_item_on" data-nav-index="1">
+					所有管辖店铺
+				</div>
+				<div class="weui_navbar_item" data-nav-index="2">
+					计划巡访店铺
+				</div>
+			</div>
+			<div class="weui_tab_bd">
+				<div class="tab-body tab-body-1 tab-body-on">
+					<div class="search-box-container">
+					<div class="w-search-box">
+	<div class="weui_search_bar" id="search_bar">
+		<form class="weui_search_outer">
+			<div class="weui_search_inner">
+				<i class="weui_icon_search"></i>
+				<input type="search" class="weui_search_input" id="search_input" placeholder="搜索" required="">
+				<a href="javascript:" class="weui_icon_clear" id="search_clear"></a>
+			</div>
+			<label for="search_input" class="weui_search_text" id="search_text">
+				<i class="weui_icon_search"></i>
+				<span>搜索</span>
+			</label>
+		</form>
+		<a href="javascript:" class="weui_search_cancel" id="search_cancel">取消</a>
+	</div>
+	<div class="search-tips"></div>
+	<div class="weui_cells weui_cells_access search-show" id="search_show">
+	</div>
+</div>
+
+					</div>
+				</div>
+				<div class="tab-body tab-body-2">
+					<div class="weui_cells visit-plan-list-wrap"></div>
+					<div class="visit-tips">* 可以从所有管辖店铺中选择零售户添加巡访计划。</div>
+				</div>
+			</div>
+
+		</div>
+		<script id="visit-record-tpl" type="text/x-handlebars-template">
+			<div class="weui_cell">
+				<div class="weui_cell_bd weui_cell_primary record-left">
+					<h3>{{{storeName}}}</h3>
+					<p>{{{address}}}</p>
+				</div>
+				<div class="weui_cell_bd">
+					{{#if hasAdd}}
+						<a href="javascript:;" class="weui_btn weui_btn_disabled weui_btn_default">已添加</a>
+					{{else}}
+						<a href="javascript:;" class="weui_btn weui_btn_primary btn-add" data-storeid="{{storeId}}">添加计划</a>
+					{{/if}}
+				</div>
+			</div>
+		</script>
+		<script id="added-record-tpl" type="text/x-handlebars-template">
+			{{#each planList}}
+			<div class="weui_cell">
+				<div class="weui_cell_bd weui_cell_primary record-left">
+					<h3>{{{storeName}}}</h3>
+					<p>{{{address}}}</p>
+				</div>
+				<div class="weui_cell_bd visit-status">
+					{{#if hasVisited}}
+						<span class="visit-status-text">已巡访</span><img class="visit-icon" src="../../common/img/ic_xfjh_ok.png" alt="icon">
+					{{else}}
+						<a href="http://lzqy.iyiplus.com/res/{{#if isMarketer}}submit-plan{{else}}visit-submit{{/if}}.html?planId={{planId}}&date={{date}}&storeName={{formatStoreName}}" class="weui_btn weui_btn_primary btn-visit" data-planid="{{planId}}">提交巡访</a>
+						<a href="javascript:;" class="weui_btn weui_btn_default btn-remove" data-planid="{{planId}}">删除计划</a>
+					{{/if}}
+				</div>
+			</div>
+			{{/each}}
+		</script>
+		<script src="./index-combo-min.js" ></script>
+	</body>
+</html>
+
+EOT;
+
+?>

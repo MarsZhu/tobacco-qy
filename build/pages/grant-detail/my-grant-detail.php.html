@@ -1,0 +1,53 @@
+<?php 
+
+echo<<<EOT
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>我的积分详情</title>
+		<link rel="stylesheet" href="../../common/css/weui-min.css" rel="stylesheet" / />
+		<link rel="stylesheet" href="./index-min.css" rel="stylesheet" / />
+	</head>
+	<body ontouchstart>
+		<div class="container" id="container"></div>
+		<script id="grant-detail-tpl" type="text/x-handlebars-template">
+			<div class="weui_cells weui_cells_access">
+				<div class="weui_cell">
+					<div class="weui_cell_hd">
+						<img class="grant-avatar" src="../../common/img/pic_jfjl.png" alt="icon">
+					</div>
+					<div class="weui_cell_bd weui_cell_primary">
+						<h3>{{storeName}}</h3>
+						<p><span>已获得<b>{{grants}}</b>积分</span></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="weui_cells_title grant-detail-title">
+				<div><img class="type-icon" src="../../common/img/ic_jfjl_jfmx.png" alt="icon" /></div>
+				<div class="weui_cell_primary">积分明细</div>
+				<div class="weui_cell_primary" style="text-align:right;"><a href="../grant-qa/index.html">如何获得更多积分？</a></div>
+			</div>
+			<div class="weui_cells">
+				{{#each records}}
+				<div class="weui_cell grant-detail-cell">
+					<div class="weui_cell_bd weui_cell_primary">
+						<h3>{{event}}</h3>
+						<p>{{date}}</p>
+					</div>
+					<div class="weui_cell_bd weui_cell_primary">
+						<h4>{{grantChange}}个积分</h4>
+					</div>
+				</div>
+				{{/each}}
+			</div>
+		</script>
+		<script src="./my-grant-detail-combo-min.js" ></script>
+	</body>
+</html>
+
+EOT;
+
+?>

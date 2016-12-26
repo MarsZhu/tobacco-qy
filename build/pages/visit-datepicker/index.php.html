@@ -1,0 +1,88 @@
+<?php 
+
+echo<<<EOT
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>我的巡访计划</title>
+		<link rel="stylesheet" href="../../common/css/weui-min.css" rel="stylesheet" / />
+		<link rel="stylesheet" href="./index-min.css" rel="stylesheet" / />
+	</head>
+	<body ontouchstart>
+		<div class="container" id="container">
+			
+			<div class="weui_cells">
+				<div class="weui_cell weui_cell_primary">
+					<div class="weui_cell_primary">
+						<div class="selector-wrap">
+							<div class="selector-text">选择查询年份</div>
+							<div class="selector-main selector-main-year">
+								<div class="selector-btn selector-btn-left"><span></span></div>							
+								<div class="selector-select">
+									<select name="year" id="year">
+									</select>
+								</div>							
+								<div class="selector-btn selector-btn-right"><span></span></div>							
+							</div>
+						</div>
+					</div>
+					
+					<div class="weui_cell_primary">
+						<div class="selector-wrap">
+							<div class="selector-text">选择查询月份</div>
+							<div class="selector-main selector-main-month">
+								<div class="selector-btn selector-btn-left"><span></span></div>							
+								<div class="selector-select">
+									<select name="month" id="month" style="padding-left: 26px;">
+										<option value="1">01</option>
+										<option value="2">02</option>
+										<option value="3">03</option>
+										<option value="4">04</option>
+										<option value="5">05</option>
+										<option value="6">06</option>
+										<option value="7">07</option>
+										<option value="8">08</option>
+										<option value="9">09</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+									</select>
+								</div>							
+								<div class="selector-btn selector-btn-right"><span></span></div>							
+							</div>
+						</div>
+					</div>
+				</div>
+			
+			</div>
+
+			<div class="weui_cells date-picker-wrap"></div>
+		
+		</div>
+		<script id="datepicker-tpl" type="text/x-handlebars-template">
+				<div class="weui_cell weui_cell_primary date-row">
+					<div class="date-item weui_cell_primary"><span>日</span></div>
+					<div class="date-item weui_cell_primary"><span>一</span></div>
+					<div class="date-item weui_cell_primary"><span>二</span></div>
+					<div class="date-item weui_cell_primary"><span>三</span></div>
+					<div class="date-item weui_cell_primary"><span>四</span></div>
+					<div class="date-item weui_cell_primary"><span>五</span></div>
+					<div class="date-item weui_cell_primary"><span>六</span></div>
+				</div>
+				{{#each weeks}}
+				<div class="weui_cell weui_cell_primary date-row">
+					{{#each this}}
+					<a href="{{#if fullDate}}../visit-list/{{#if isFuture}}future-date{{else}}pass-date{{/if}}.html?date={{fullDate}}{{#if isMarketer}}&role=marketer{{/if}}{{else}}javascript:void(0);{{/if}}" class="date-item weui_cell_primary {{#if disable}}date-item-disable{{/if}} {{#if done}}date-item-done{{/if}} {{#if fail}}date-item-fail{{/if}} {{#if current}}date-item-current{{/if}}"><span>{{date}}</span><em>●</em></a>
+					{{/each}}
+				</div>
+				{{/each}}
+		</script>
+		<script src="./index-combo-min.js" ></script>
+	</body>
+</html>
+
+EOT;
+
+?>

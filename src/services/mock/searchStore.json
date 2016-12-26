@@ -1,0 +1,37 @@
+cb({
+	"code": "0",
+	"msg": "success",
+	"data": {
+		"storeList": [
+			{
+				"storeId": 1,
+			 	"storeName": "xxx店",
+			 	"ownerName": "王树五",
+			 	"supervisorName": "张啊三",
+			 	"marketerName": "李的四",
+			 	"licenceCode": "213123",
+			 	"customerCode": "213"
+			},
+			{
+				"storeId": 2,
+			 	"storeName": "xxx店",
+			 	"ownerName": "王五",
+			 	"supervisorName": "张三",
+			 	"marketerName": "李四",
+			 	"licenceCode": "213123",
+			 	"customerCode": "213"
+			},
+			{
+				"storeId": 3,
+			 	"storeName": "xxx店",
+			 	"ownerName": "王五",
+			 	"supervisorName": "张三",
+			 	"marketerName": "李四",
+			 	"licenceCode": "213123",
+			 	"customerCode": "213"
+			}
+		],
+		"count": 3,
+		"hasMore": true
+	}
+})
